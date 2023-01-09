@@ -1,10 +1,12 @@
 #!/usr/bin/python3
-"""add all the attr"""
+"""
+    101-add_attribute module
+    Function that adds a new attribute to an object if it’s possible
+"""
 
 
-def add_attribute(obj, name, value):
-    """assign dem attr"""
-    if hasattr(obj, '__dict__') or name in getattr(obj, '__slots__', {}):
-        setattr(obj, name, value)
-    else:
+def add_attribute(cla, attri, value):
+    """Function that adds a new attribute to an object if it's possible"""
+    if not(hasattr(cla, '__dict__')):
         raise TypeError("can't add new attribute")
+    setattr(cla, attri, value)
