@@ -1,4 +1,5 @@
 #!/usr/bin/node
-// prints two arguments passed to it, in the following format: “ is ”
-
-console.log(process.argv[2] + ' is ' + process.argv[3]);
+const process = require('process');
+const arg2 = process.argv[2];
+const arg3 = process.argv[3];
+console.log(`${arg2} is ${arg3}`);
