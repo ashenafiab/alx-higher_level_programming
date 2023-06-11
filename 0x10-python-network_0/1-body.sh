@@ -1,3 +1,3 @@
 #!/bin/bash
-# Display the body after Get request
-curl -s -X GET -L "$1"
+# script that takes in a URL, sends a GET request to the URL, and displays the body of the response
+curl -Ls "$1"
